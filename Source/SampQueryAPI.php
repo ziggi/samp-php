@@ -108,7 +108,7 @@ class SampQueryAPI
 	 *		[maxplayers] => 500
 	 *		[hostname] => Everystuff Tr3s [MAD]oshi (03a Final) [FIXED]
 	 *		[gamemode] => Stunt/Race/DM/FR Everystuff
-	 *		[mapname] => Everystuff
+	 *		[language] => Everystuff
 	 *	)
 	 *	</code>
 	 *
@@ -135,7 +135,7 @@ class SampQueryAPI
 		$aDetails['gamemode'] = (string) fread($this->rSocket, $iStrlen);
 		
 		$iStrlen = ord(fread($this->rSocket, 4));
-		$aDetails['mapname'] = (string) fread($this->rSocket, $iStrlen);
+		$aDetails['language'] = (string) fread($this->rSocket, $iStrlen);
 		
 		return $aDetails;
 	}
